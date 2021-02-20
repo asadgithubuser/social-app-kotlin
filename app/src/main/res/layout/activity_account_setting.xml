@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AccountSettingActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/white">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/close"/>
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/save_edited_info"/>
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appbar_layout"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/edit_profile_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Edit Profile"
+                android:textSize="23dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:gravity="left"
+                android:layout_marginVertical="20dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_toRightOf="@id/edit_profile_txt"
+                android:background="@color/colorPrimaryDark"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/edit_profile_img"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/asad"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/edit_profile_img_btnImg"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignBottom="@+id/edit_profile_img"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="250dp"
+                android:layout_marginLeft="233dp"
+                android:layout_marginTop="83dp"
+                android:layout_marginEnd="128dp"
+                android:layout_marginRight="128dp"
+                android:layout_marginBottom="17dp"
+                android:src="@drawable/edit_pencil"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:orientation="vertical">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter name"
+                android:ems="10"
+                android:outlineAmbientShadowColor="@color/colorPrimary"
+                android:textColorHint="@color/colorPrimaryDark"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:hint="Enter Email"
+                android:textColorHint="@color/colorPrimaryDark"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:counterMaxLength="100"
+                app:counterEnabled="true">
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:hint="Write About Yourself"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:weightSum="2"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_border_style"
+                    android:layout_marginRight="5dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="Update"/>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:background="@drawable/edittext_border_style"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:text="Cancel"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="20dp"
+        android:layout_alignParentBottom="true">
+        <LinearLayout
+            android:id="@+id/profile_set_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/profile_setting_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile Setting"
+                android:textSize="22dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:gravity="left"
+                android:layout_marginLeft="20dp"
+                android:layout_marginVertical="20dp"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/colorPrimaryDark" />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_below="@+id/profile_set_txt"
+            android:weightSum="2"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/accnt_set_logoutBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_border_style"
+                android:layout_marginRight="5dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="Logout"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:background="@drawable/edittext_border_style"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:text="Delete Account"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
