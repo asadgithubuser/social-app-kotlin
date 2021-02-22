@@ -19,18 +19,16 @@ class SignUpActivity : AppCompatActivity() {
         res_to_login_btn.setOnClickListener {
             startActivity(Intent(this, SignInActivity::class.java))
         }
-
         register_btn.setOnClickListener {
             createAccount()
         }
     }
 
     private fun createAccount() {
-        val fullName = fullName.text.toString()
-        val profession = profession.text.toString()
-        val email = email.text.toString()
+        val fullName = fullName.text.toString().toLowerCase()
+        val profession = profession.text.toString().toLowerCase()
+        val email = email.text.toString().toLowerCase()
         val password = password.text.toString()
-
         when{
             TextUtils.isEmpty(fullName)-> Toast.makeText(this, "Name should not be empty", Toast.LENGTH_SHORT).show()
             TextUtils.isEmpty(profession) -> Toast.makeText(this, "Profession field should not be empty", Toast.LENGTH_SHORT).show()

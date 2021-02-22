@@ -26,6 +26,7 @@
                     android:paddingLeft="4dp"
                     android:src="@drawable/search"/>
                 <EditText
+                    android:id="@+id/edit_search_field"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:paddingLeft="40dp"
@@ -40,8 +41,11 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_userItem_list"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_marginHorizontal="20dp"
         android:layout_below="@+id/top_appbar_layout"/>
 
 </RelativeLayout>
