@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="style_bg">
+        <item name="android:shape">rectangle</item>
+        <item name="android:background">@color/purple_200</item>
+        <item name="android:radius">10dp</item>
+        <item name="android:text">test 1</item>
+    </style>
+
+    <style name="Base.TextAppearance.AppCompat.Widget.Button.btn">
+        <item name="android:shape">rectangle</item>
+        <item name="android:background">@color/teal_200</item>
+        <item name="cornerRadius">30dp</item>
+        <item name="android:text">style 2</item>
+    </style>
+</resources>

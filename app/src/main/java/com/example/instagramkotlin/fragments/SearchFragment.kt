@@ -1,5 +1,6 @@
 package com.example.instagramkotlin.fragments
 
+import android.content.Context
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -14,6 +15,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.instagramkotlin.Adapter.UserAdapter
 import com.example.instagramkotlin.Models.User
 import com.example.instagramkotlin.R
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -46,7 +49,7 @@ class SearchFragment : Fragment() {
         recyclerView?.layoutManager = LinearLayoutManager(context)
 
         mUser = ArrayList()
-        userAdapter = context?.let{UserAdapter(it,mUser as ArrayList<User>,true)}
+        userAdapter = context?.let{UserAdapter(it, mUser as ArrayList<User>,true)}
         recyclerView?.adapter = userAdapter
 
         view.edit_search_field.addTextChangedListener(object: TextWatcher
@@ -68,7 +71,6 @@ class SearchFragment : Fragment() {
             }
         })
         return view
-
     }
 
     private fun userSearch(input: String) {
@@ -121,6 +123,7 @@ class SearchFragment : Fragment() {
             }
         })
     }
+
 
 
 }

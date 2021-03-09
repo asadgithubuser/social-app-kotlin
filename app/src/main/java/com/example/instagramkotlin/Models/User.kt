@@ -37,7 +37,7 @@ class User {
     fun getPassword():String{
         return password
     }
-    fun getBio():String{
+    fun getAboutUrSelf():String{
         return aboutUrSelf
     }
     fun getImage():String{
@@ -57,7 +57,7 @@ class User {
     fun setPassword(password: String){
         this.password = password
     }
-    fun setBio(aboutUrSelf: String){
+    fun setAboutUrSelf(aboutUrSelf: String){
         this.aboutUrSelf = aboutUrSelf
     }
     fun setImage(image: String){

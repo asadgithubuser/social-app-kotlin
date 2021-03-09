@@ -1,5 +1,6 @@
 package com.example.instagramkotlin
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -26,7 +27,8 @@ class MainActivity : AppCompatActivity() {
                 return@OnNavigationItemSelectedListener true
             }
             R.id.nav_addpost ->{
-                selectFragmentMethod(AddPostFragment())
+                startActivity(Intent(this, AddNewPost::class.java))
+                item.isChecked = false
                 return@OnNavigationItemSelectedListener true
             }
             R.id.nav_search ->{

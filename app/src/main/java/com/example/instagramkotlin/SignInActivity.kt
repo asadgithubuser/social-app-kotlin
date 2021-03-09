@@ -32,7 +32,11 @@ class SignInActivity : AppCompatActivity() {
         }
 
         login_btn.setOnClickListener {
-            userLoginFun()
+            if(FirebaseAuth.getInstance().currentUser != null){
+                userLoginFun()
+            }else{
+                Toast.makeText(this, "User Not Found !!. Please Register first.", Toast.LENGTH_LONG).show()
+            }
         }
     }
 

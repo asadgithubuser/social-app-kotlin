@@ -16,6 +16,7 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
 
+
         res_to_login_btn.setOnClickListener {
             startActivity(Intent(this, SignInActivity::class.java))
         }
@@ -41,6 +42,7 @@ class SignUpActivity : AppCompatActivity() {
                 progressDialog.setMessage("Please Wait, this will take some time...")
                 progressDialog.setCanceledOnTouchOutside(false)
                 progressDialog.show()
+
 
                 val mAuth : FirebaseAuth = FirebaseAuth.getInstance()
                 mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener {task ->
@@ -78,6 +80,13 @@ class SignUpActivity : AppCompatActivity() {
             if(task.isSuccessful){
                 progressDialog.dismiss()
                 Toast.makeText(this, "You have register created successfully", Toast.LENGTH_LONG).show()
+
+
+                FirebaseDatabase.getInstance().reference
+                    .child("Follow").child(currentUID)
+                    .child("Following").child(currentUID)
+                    .setValue(true)
+
                 val intent = Intent(this, MainActivity::class.java)
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
                     startActivity(intent)

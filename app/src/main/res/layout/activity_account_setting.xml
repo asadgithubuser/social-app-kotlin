@@ -73,30 +73,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/edit_profile_img"
+                android:id="@+id/profile_setting_edit_profile_img"
                 android:layout_width="140dp"
                 android:layout_height="140dp"
                 android:layout_centerHorizontal="true"
                 android:src="@drawable/asad"/>
 
-            <de.hdodenhof.circleimageview.CircleImageView
+            <ImageView
                 android:id="@+id/edit_profile_img_btnImg"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:layout_alignBottom="@+id/edit_profile_img"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginStart="250dp"
-                android:layout_marginLeft="233dp"
-                android:layout_marginTop="83dp"
-                android:layout_marginEnd="128dp"
-                android:layout_marginRight="128dp"
-                android:layout_marginBottom="17dp"
-                android:src="@drawable/edit_pencil"
-                android:layout_centerHorizontal="true"/>
+                android:layout_alignRight="@+id/profile_setting_edit_profile_img"
+                android:layout_alignBottom="@+id/profile_setting_edit_profile_img"
+                android:src="@drawable/edit_pencil"/>
 
         </RelativeLayout>
         <LinearLayout
@@ -105,6 +94,7 @@
             android:layout_marginHorizontal="20dp"
             android:orientation="vertical">
             <EditText
+                android:id="@+id/edit_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Enter name"
@@ -113,10 +103,11 @@
                 android:textColorHint="@color/colorPrimaryDark"/>
 
             <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edit_profession"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:hint="Enter Email"
+                android:hint="Enter Profession"
                 android:textColorHint="@color/colorPrimaryDark"/>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -125,6 +116,7 @@
                 app:counterMaxLength="100"
                 app:counterEnabled="true">
                 <EditText
+                    android:id="@+id/edit_abouturself"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/white"
@@ -139,6 +131,7 @@
                 android:weightSum="2"
                 android:orientation="horizontal">
                 <Button
+                    android:id="@+id/updateUserInfo"
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:layout_weight="1"
@@ -200,7 +193,7 @@
             android:weightSum="2"
             android:orientation="horizontal">
             <Button
-                android:id="@+id/accnt_set_logoutBtn"
+                android:id="@+id/account_setting_logoutBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:layout_weight="1"
